@@ -2,8 +2,23 @@
     font-family: Oswald;
     src: url('../fonts/Oswald-Regular.ttf');
 }
+
 h1 {
     font: bold 75px 'Oswald', sans-serif;
     color: $page-headers;
     text-transform: uppercase;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    line-height: 1em;
+    margin: 0.2em auto;
+}
+
+h1:before, h1:after {
+    content: '';
+    flex-grow: 1;
+    background-color: $page-headers;
+    margin: 0em 0.2em;
+    margin-top: 0.8em;
+    height: 0.2em;
 }
