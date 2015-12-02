@@ -1,8 +1,13 @@
 .navbar-default .navbar-nav > li > a {
-    font: bold 35px 'Oswald', sans-serif;
+    font: bold 20px 'Oswald', sans-serif;
     color: $menu-item;
     text-transform: uppercase;
+    padding-left: 5em;
     &:hover {
       color: $page-headers;
     }
+}
+
+.navbar-default {
+    background-color: white;
 }
