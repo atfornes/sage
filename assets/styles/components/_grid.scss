@@ -8,3 +8,47 @@
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
+
+// Gallery shortcode
+.gallery-columns-3 {
+  @include make-row();
+}
+
+.gallery-columns-3 .gallery-item {
+  @include make-md-column(4);
+}
+
+.gallery-item .landscape {
+  @extend .thumbnail;
+  @extend .dark-hover;
+  border: none;
+}
+
+.gallery-item .portrait {
+  @extend .thumbnail;
+  @extend .dark-hover;
+  border: none;
+}
+
+.gallery-caption {
+  display: none;
+}
+
+.dark-hover {
+  img {
+    -webkit-filter: brightness(100%);
+  }
+
+  img:hover {
+    -webkit-filter: brightness(70%);
+	-moz-filter: brightness(70%);
+	-o-filter: brightness(70%);
+	-ms-filter: brightness(70%);
+	filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+}
