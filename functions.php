@@ -25,3 +25,10 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+// using http://stackoverflow.com/questions/11159860/how-do-i-add-a-simple-jquery-script-to-wordpress/12025482#12025482
+
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
+function add_my_script() {
+    wp_enqueue_script('smoothScroll', get_template_directory_uri() . '/assets/scripts/smoothScroll.js', array('jquery'));
+}
