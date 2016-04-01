@@ -67,5 +67,10 @@ img {
 }
 
 .page-section {
-    min-width: 100vh;
+    height: 100vh;
+    display: table;
+}
+
+.wp-editor .page-section {
+    height: auto;
 }
